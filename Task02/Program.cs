@@ -11,9 +11,19 @@ namespace Task02
             string inputText;
             var outputText = new StringBuilder();
 
-            using (var sr = new StreamReader(@"..\..\65.result"))
+            Console.WriteLine("Please, enter the path to the input file.");
+            var path = Console.ReadLine();
+            if (path != null)
             {
-                inputText = sr.ReadToEnd().ToLower();
+                using (var sr = new StreamReader(path))
+                {
+                    inputText = sr.ReadToEnd().ToLower();
+                }
+            }
+            else
+            {
+                Console.WriteLine("Path was not specified.");
+                return;
             }
 
             var delimiters = new[] { ' ', '-', ',', '.', '!', '?', ':', ';' };

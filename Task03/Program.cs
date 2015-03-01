@@ -12,7 +12,7 @@ namespace Task03
             var musePairs = new List<List<int>>();
 
             Console.WriteLine("Please, enter the path to the input file.");
-            string path = Console.ReadLine();
+            var path = Console.ReadLine();
             if (path != null)
                 using (var sr = new StreamReader(path))
                 {
@@ -27,6 +27,7 @@ namespace Task03
             else
             {
                 Console.WriteLine("Path was not specified.");
+                return;
             }
 
             var languageCounter = 0;

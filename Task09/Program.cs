@@ -54,7 +54,7 @@ namespace Task09
                     judgesMistakesCount.Add(entry.Judge, 0);
                 }
             }
-            var carelessJudge = judgesMistakesCount.First(x =>
+            var carelessJudge = judgesMistakesCount.FirstOrDefault(x =>
                 x.Value == judgesMistakesCount.Values.Max()).Key;
 
             return averagePenalty + " " + totalScore + " " + carelessJudge;

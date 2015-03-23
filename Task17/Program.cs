@@ -73,8 +73,8 @@ namespace Task17
                         - (triangles[i][0].X - triangles[i][2].X)
                         *(triangles[i][2].Y - contestantPoint.Y);
 
-                if ((a <= 0 && b <= 0 && c <= 0) ||
-                    (a >= 0 && b >= 0 && c >= 0))
+                if ((a < 0 && b < 0 && c < 0) ||
+                    (a > 0 && b > 0 && c > 0))
                 {
                     contestantMistakes.Append((i + 1) + " ");
                 }

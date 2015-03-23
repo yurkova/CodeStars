@@ -63,7 +63,7 @@ namespace Task18
                     + (circles[i][1] - contestantPoint[1])
                     *(circles[i][1] - contestantPoint[1]));
 
-                if (!(distance <= circles[i][2])) continue;
+                if (!(distance < circles[i][2])) continue;
                 hitsAndPenalty.Append((i + 1) + " ");
                 penalty += 499;
             }
